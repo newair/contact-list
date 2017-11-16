@@ -1,0 +1,25 @@
+
+<!-- Contains the Html form for submition of a new contact. form object is passed along with -->
+<form fxLayout="row" #contactFormElement="ngForm" [formGroup]="contactForm" (ngSubmit)="onSubmit(contactFormElement)" fxLayoutGap="10px">
+  
+  <mat-form-field fxFlex>
+    <input matInput placeholder="First Name" [formControl]="firstName">
+    <mat-error *ngIf="firstName.invalid">{{getInvalidFirstNameErrorMessage()}}</mat-error>
+  </mat-form-field>
+  
+  <mat-form-field fxFlex>
+    <input matInput placeholder="Last Name" [formControl]="lastName">
+  </mat-form-field>
+
+  <mat-form-field fxFlex>
+    <input matInput placeholder="Phone" [formControl]="phone">
+    <mat-error *ngIf="phone.invalid">{{getInvalidPhoneNumberErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field fxFlex>
+    <input matInput placeholder="Email" [formControl]="email">
+    <mat-error *ngIf="email.invalid">{{getInvalidEmailErrorMessage()}}</mat-error>
+  </mat-form-field>
+  
+  <button fxFlex mat-button color="primary" type="submit">Submit</button>
+</form>
