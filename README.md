@@ -29,6 +29,7 @@ contact through a form and display inserted contacts for both mobile and web.
 
 ## Possible issues
 
+* If project does not build on initial npm insall on front end, install the angular-cli       globally and then npm install.There is a Angular specific issue that is occuring t2t.
 * If using linux based OS make sure to set the correct file permision to write the            contacts.json for the user who is executing.
 * Porduct not tested for all the mobile resolutions.
 
