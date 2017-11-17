@@ -16,6 +16,8 @@ contact through a form and display inserted contacts for both mobile and web.
 
 * Inside folder run npm install.
 * Run node index.js to Start the server.
+* Once the server is up run http://localhost:8082/ to access the already build version.
+  Building the app is described below.
 
 ### How to Setup client
 
