@@ -62,8 +62,8 @@ export class ContactAddComponent implements OnInit {
       let contact = new Contact(
         formValues.firstName,
         (formValues.lastName || ''), // Last name is kept optional
+        formValues.phone,
         formValues.email,
-        formValues.phone
       )
       this.contactService.saveContact(contact); // request the data service to save the contact
     }

@@ -1,9 +1,14 @@
+import { Subject } from 'rxjs/Subject';
 import { JsonReponse } from './JsonResponse';
 import { environment } from '../environments/environment';
-import { Observable, Subject } from 'rxjs/Rx';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/catch';
+
 import { HttpClient } from '@angular/common/http';
 import { Contact } from './models/contact.model';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 /**
  * This service is responsible for fetching data from the server

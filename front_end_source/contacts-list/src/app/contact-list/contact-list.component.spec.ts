@@ -1,11 +1,13 @@
 import {Contact} from '../models/contact.model';
-import { Observable, Subject } from 'rxjs/Rx';
+import { Subject } from 'rxjs/Subject';
 import {AngularMaterialModule} from '../angular-material/angular-material.module';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
 
 import { ContactListComponent } from './contact-list.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ContactService } from '../contact.service';
+import { Observable } from 'rxjs/Observable';
 
 class ContactServiceStub{
     contactSubject = new Subject<any>();
