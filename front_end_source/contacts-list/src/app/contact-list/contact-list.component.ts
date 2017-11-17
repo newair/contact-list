@@ -12,15 +12,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactListComponent implements OnInit {
 
-  contacts= []; // This is bind to template
+  contacts = []; // This is bind to template
   constructor(private contactService: ContactService) { }
 
   ngOnInit() {
-    this.contactService.contactSubject.subscribe((contact: Contact)=>{
+    this.contactService.contactSubject.subscribe((contact: Contact) => {
       this.contacts.unshift(contact); //append to begining
-  },(error: string)=>{
+    }, (error: string) => {
       alert(error); // inform the failure message
-  });
+    });
     this.contactService.getContacts(); // Request to get the contacts
   }
 

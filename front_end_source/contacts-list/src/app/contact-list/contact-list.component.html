@@ -1,25 +1,27 @@
-<div class="contact-list-container" fxLayout='row'>
-   
+<!-- Lists all the contacts -->
+<div class="contact-list-container">
+
   <div fxLayout='column' fxLayoutGap="5px" fxLayoutAlign="space-around stretch">
+
+    <!-- Itereate through the material card layout for the contacts -->
     <mat-card *ngFor="let contact of contacts" fxLayout="row">
       <div class="info" fxFlex='30%'>
-      <mat-card-header>
-        <mat-card-title>{{contact.firstName}}</mat-card-title>
-        <mat-card-subtitle>{{contact.email}}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-       <label>Full Name</label> <span>{{contact.fullName}}</span>
-      </mat-card-content>
-      <mat-card-content>
-        <label>Phone</label> <span>{{contact.phone}}</span> 
-      </mat-card-content>
-    </div>
-    <img fxFlex fxFlex='20%' height="100px" fxFlexOffset="50%" mat-card-image src="https://cdn3.iconfinder.com/data/icons/toolbar-people/512/user_man_male_profile_account_person_people-512.png" alt="Photo of contact">
-    
+        <mat-card-header>
+          <mat-card-title class="firstName">{{contact.firstName}}</mat-card-title>
+          <mat-card-subtitle>{{contact.email}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content fxLayout.lt-md="column">
+          <label fxFlex.lt-md class="fullName-label">Full Name</label>
+          <span fxFlex.lt-md>{{contact.fullName}}</span>
+        </mat-card-content>
+        <mat-card-content fxLayout.lt-md="column" >
+          <label fxFlex.lt-md class="phone-label">Phone</label>
+          <span fxFlex.lt-md>{{contact.phone}}</span>
+        </mat-card-content>
+      </div>
+      <img fxFlex fxFlex='20%' height="100px" fxFlexOffset="50%" mat-card-image src="https://cdn3.iconfinder.com/data/icons/toolbar-people/512/user_man_male_profile_account_person_people-512.png"
+        alt="Photo of contact">
     </mat-card>
-  
-  
+
   </div>
-  
-  
 </div>

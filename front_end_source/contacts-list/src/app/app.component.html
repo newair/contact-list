@@ -1,6 +1,7 @@
-<div class="main-container" fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="center end">
-    <div class="main-body-container" fxFlex="70%" fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center center" >
-        <app-contact-add fxFlex></app-contact-add>
+<div class="main-container" fxLayout="row"  fxLayoutGap="20px" fxLayoutGap.lt-md="50px" fxLayoutAlign="center end">
+    <div class="main-body-container" fxFlex.lt-md="100%" fxFlex="70%"  fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center center" >
+        <app-contact-add fxFlex fxFlex.lt-md="false" ></app-contact-add>
+        <hr>
         <app-contact-list fxFill></app-contact-list>
     </div>
 </div>
